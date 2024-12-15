@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5 book-details">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{ book.cover.url }}" class="img-fluid" alt="{{ book.title }}">
+        </div>
+        <div class="col-md-6">
+            <h2>{{ book.title }}</h2>
+            <p><strong>Author:</strong> {{ book.author }}</p>
+            <p><strong>Published:</strong> {{ book.publication_date }}</p>
+            <p><strong>Category:</strong> {{ book.category }}</p>
+            <p class="price"><strong>Price:</strong> ${{ book.price }}</p>
+            {% if book.availability == 'free' %}
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#downloadModal">Download</button>
+            {% else %}
+                <button class="btn btn-danger" disabled>Coming Soon (Payment Integration)</button>
+            {% endif %}
+        </div>
+    </div>
+
+    <h3>Reviews</h3>
+    {% for review in reviews %}
+        <div class="review-card">
+            <strong>{{ review.user.username }}</strong> (Rating: {{ review.rating }})<br>
+            <p>{{ review.review_text }}</p>
+        </div>
+    {% empty %}
+        <p>No reviews yet. Be the first to review this book!</p>
+    {% endfor %}
+
+    <h4>Add Your Review</h4>
+    <form method="POST" class="review-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Submit Review</button>
+    </form>
+</div>
+
+<!-- Download Confirmation Modal -->
+<div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="downloadModalLabel">Confirm Download</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to download {{ book.title }}?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <a href="{{ book.book_file.url }}" class="btn btn-primary" download>Yes, Download</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

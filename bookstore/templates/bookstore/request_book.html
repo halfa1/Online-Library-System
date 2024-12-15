@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg">
+                <div class="card-header bg-success text-white text-center">
+                    <h4>Request a Book</h4>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted text-center mb-4">
+                        Please fill in the form below to request a book to be added to our library.
+                    </p>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="id_title" class="form-label">Book Title</label>
+                            {{ form.title }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="id_author" class="form-label">Author Name</label>
+                            {{ form.author }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="id_email" class="form-label">Your Email</label>
+                            {{ form.email }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="id_message" class="form-label">Additional Information</label>
+                            {{ form.message }}
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Submit Request</button>
+                    </form>
+                </div>
+                <div class="card-footer text-center text-muted">
+                    We’ll notify you via email once your requested book is available!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

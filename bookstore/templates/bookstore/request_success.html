@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+    <h2>Thank You!</h2>
+    <p>Your book request has been received. Please keep checking for updates!</p>
+    <a href="{% url 'bookslist' %}" class="btn btn-primary">Go Back to Home</a>
+</div>
+{% endblock %}

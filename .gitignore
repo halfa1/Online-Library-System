@@ -1,0 +1,26 @@
+# Python compiled files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+env/
+venv/
+
+# Django stuff
+db.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyo
+
+# Media uploads
+
+# Environment variables
+.env
+
+# OS and editor-specific files
+*.swp
+.DS_Store
+Thumbs.db
+
+# Static files (if using collectstatic)
