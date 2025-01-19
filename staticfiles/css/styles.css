@@ -1,0 +1,445 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.hero {
+    background: url('../images/backgroundimage.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+/* General form styling */
+.card {
+    border-radius: 12px; /* Slightly rounded corners for a modern look */
+    border: 1px solid #e0e0e0; /* Light border for structure */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    overflow: hidden; /* Ensure child elements like images stay within bounds */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1); /* More prominent shadow on hover */
+}
+
+.card img {
+    border-bottom: 1px solid #e0e0e0; /* Divide image and card body */
+    object-fit: cover; /* Maintain aspect ratio */
+    width: 100%;
+    height: 200px; /* Ensure consistent image height */
+}
+
+.card-body {
+    padding: 15px; /* Add spacing inside the card */
+    text-align: center; /* Center-align text for uniformity */
+    background-color: #ffffff; /* Clean background for text */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Slightly larger title */
+    font-weight: bold;
+    color: #333; /* Professional, dark text color */
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.95rem; /* Readable text size */
+    color: #555; /* Muted color for secondary text */
+    margin-bottom: 15px;
+}
+
+.card-footer {
+    background-color: #f8f9fa; /* Subtle footer background */
+    padding: 10px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.card-footer a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+}
+
+.card-footer a:hover {
+    text-decoration: underline;
+}
+
+
+.card-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-body form {
+    margin-top: 1rem;
+}
+
+.card-body button {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Focus states */
+form input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Center the text */
+.text-center a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}
+
+/* Error message styling */
+.text-danger {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #d9534f;
+}
+
+/* Form input focus styling */
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Improve button hover effects */
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(to right, #4caf50, #81c784);
+    border-bottom: 3px solid #388e3c;
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Book Cards */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+/* Footer Styling */
+footer {
+    background: #1b5e20; /* Deep green for a library feel */
+    color: white;
+    padding: 40px 0;
+    font-size: 14px;
+    margin-top: 40px;
+    border-top: 3px solid #a5d6a7; /* Accent border for separation */
+}
+
+footer h5 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+footer p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-link {
+    color: #a5d6a7;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-link:hover {
+    color: #ffffff; /* White on hover for better contrast */
+    text-decoration: underline;
+}
+
+footer .social-icons a {
+    font-size: 18px;
+    color: #a5d6a7;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #ffffff;
+}
+
+.footer-divider {
+    border-top: 1px solid #a5d6a7;
+    margin: 20px 0;
+}
+form .form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+form .btn {
+    font-size: 16px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+form .btn:hover {
+    background-color: #2e7d32;
+    color: white;
+}
+
+.text-muted {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+/* Upload Book Container */
+.upload-book-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Card Styling */
+.upload-book-card {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Header */
+.upload-book-card .card-header {
+    background-color: #2e7d32;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Intro Paragraph */
+.upload-book-intro {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Form Labels */
+.upload-book-card .form-label {
+    font-weight: 600;
+    color: #333;
+    display: block;  /* Ensure the labels are block level */
+    margin-bottom: 5px;  /* Add space between label and input */
+}
+
+/* Input Fields */
+.upload-book-card .form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%; /* Ensure all input fields take up full width */
+}
+
+/* Ensure all form elements (inputs) have consistent height and padding */
+.upload-book-card .form-control, 
+.upload-book-card select, 
+.upload-book-card textarea {
+    height: auto; /* Remove any predefined height to make them equal */
+    padding: 10px;  /* Ensure the padding is consistent across inputs */
+}
+
+/* Submit Button */
+.upload-book-card .btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+    width: auto;
+}
+
+.upload-book-card .btn:hover {
+    background-color: #1b5e20;
+    color: white;
+}
+
+/* Form Group Layout */
+.upload-book-card .form-group {
+    margin-bottom: 20px; /* Add spacing between each form field */
+}
+
+/* Card Footer */
+.upload-book-card .card-footer {
+    background-color: #f9f9f9;
+    font-size: 14px;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Ensure consistent styling for all input fields including date */
+.upload-book-card .form-control, 
+.upload-book-card select, 
+.upload-book-card textarea, 
+.upload-book-card input[type="date"] {  
+    width: 100%;  /* Ensure all fields are the same width */
+    height: auto; /* Keep height consistent */
+    padding: 10px;  /* Ensure the padding is consistent */
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Specifically target date input fields */
+.upload-book-card input[type="date"] {
+    -webkit-appearance: none;  /* Removes browser-specific styling for Webkit-based browsers */
+    -moz-appearance: none;     /* Firefox */
+    appearance: none;          /* Removes default styling in other browsers */
+    padding: 10px 10px 10px 10px; /* Explicitly set padding */
+    font-size: 14px;  /* Make font size consistent */
+    width: 100%;  /* Force it to be full width like the other fields */
+    border: 1px solid #ccc;  /* Consistent border with other inputs */
+}
+
+/* Adjust Date Picker for Webkit (Chrome, Safari) */
+.upload-book-card input[type="date"]::-webkit-datetime-edit {
+    padding: 2px;
+    font-size: 14px;
+}
+
+/* Adjust Date Picker for Firefox */
+.upload-book-card input[type="date"]::-moz-placeholder {
+    padding: 10px;
+    font-size: 14px;
+}
+
+/*book details page*/
+/* Style the main book details container */
+.book-details {
+    padding: 20px;
+}
+
+/* Style the image */
+.book-details .img-fluid {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the book details section */
+.book-details h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.book-details p {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+/* Style the price section */
+.book-details .price {
+    font-size: 1.2rem;
+    color: #2e7d32; /* Green for free books */
+}
+
+/* Style the availability button */
+.book-details .btn-success {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+.book-details .btn-danger {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+/* Style the reviews section */
+.book-details .review-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.book-details .review-card strong {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.book-details .review-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Add padding to the review form */
+.book-details .review-form {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+}
+
+.book-details .review-form textarea {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.book-details .review-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #2e7d32;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.book-details .review-form button:hover {
+    background-color: #1e5a21;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+    }
+
+    footer .row > div {
+        margin-bottom: 20px;
+    }
+}
