@@ -76,10 +76,20 @@ WSGI_APPLICATION = 'online_library.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'online_library_83vw',
+        'USER':'online_library_83vw_user',
+        'PASSWORD':'W0Zb4qt4YsJO6QaEIVHDvs0FdJpsjbUq',
+        'HOST':'dpg-cu6cmgqj1k6c73f64l20-a.oregon-postgres.render.com',
+        'PORT':'5432',
     }
 }
 
